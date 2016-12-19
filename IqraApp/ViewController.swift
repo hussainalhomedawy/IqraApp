@@ -25,7 +25,6 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, AVSpeechSynt
     @IBOutlet var speechButton: UIButton!
     @IBOutlet var micStatus: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -73,16 +72,20 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, AVSpeechSynt
     }
     
     
+    @IBAction func settingsButton(_ sender: UIBarButtonItem) {
+        presentPopoverMenu()
+    }
+    
+    private func beepSound() throws {
+        AudioServicesPlaySystemSound(1113);
+    }
+    
     func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
         if available {
             speechButton.isEnabled = true
         } else {
             speechButton.isEnabled = false
         }
-    }
-    
-    private func beepSound() throws {
-        AudioServicesPlaySystemSound(1113);
     }
     
     private func startRecording() throws {
@@ -180,6 +183,59 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, AVSpeechSynt
                 self.micStatus.text = "No matches were found"
             }
         }
+    }
+    
+    private func settingsActionTapped() {
+        let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "GeneralSettingsController") as! GeneralSettingsController
+        self.navigationController?.pushViewController(storyboard, animated: true)
+    }
+    
+    private func aboutActionTapped() {
+        let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "AboutController") as! AboutController
+        self.navigationController?.pushViewController(storyboard, animated: true)
+    }
+    
+    private func contactActionTapped() {
+        let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "ContactController") as! ContactController
+        self.navigationController?.pushViewController(storyboard, animated: true)
+    }
+    
+    private func shareActionTapped() {
+        let textToShare = "Check out this amazing app I\'ve been using called Iqra!"
+        
+        if let myWebsite = NSURL(string: "https://iqraapp.com/") {
+            let objectsToShare = [textToShare, myWebsite] as [Any]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+            activityVC.popoverPresentationController?.sourceView = self.view
+            self.present(activityVC, animated: true, completion: nil)
+        }
+    }
+    
+    private func presentPopoverMenu() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        
+        let settingsAction = UIAlertAction(title: "General Settings", style: UIAlertActionStyle.default, handler: {(alert :UIAlertAction!) in
+            self.settingsActionTapped()
+        })
+        alertController.addAction(settingsAction)
+        
+        let aboutAction = UIAlertAction(title: "About", style: UIAlertActionStyle.default, handler: {(alert :UIAlertAction!) in
+            self.aboutActionTapped()
+        })
+        alertController.addAction(aboutAction)
+        
+        let contactAction = UIAlertAction(title: "Contact", style: UIAlertActionStyle.default, handler: {(alert :UIAlertAction!) in
+            self.contactActionTapped()
+        })
+        alertController.addAction(contactAction)
+        
+        let shareAction = UIAlertAction(title: "Share", style: UIAlertActionStyle.default, handler: {(alert :UIAlertAction!) in
+            self.shareActionTapped()
+        })
+        alertController.addAction(shareAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func speechRecognition(_ sender: UIButton) {

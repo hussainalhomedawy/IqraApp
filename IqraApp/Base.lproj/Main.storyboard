@@ -107,7 +107,7 @@
                     <navigationItem key="navigationItem" id="Crl-GS-6ZG">
                         <barButtonItem key="rightBarButtonItem" image="settings" id="KgK-mi-g4r">
                             <connections>
-                                <segue destination="Dzl-HC-qjL" kind="show" id="dAV-5B-HRG"/>
+                                <action selector="settingsButton:" destination="BYZ-38-t0r" id="KRV-W8-xaN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -119,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
+            <point key="canvasLocation" x="2697" y="125"/>
         </scene>
         <!--Results-->
         <scene sceneID="W5t-Bs-NIq">
@@ -221,68 +221,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cyu-LF-eZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ODf-7k-ndH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2008.8" y="854.1229385307347"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="RGD-8J-2Nz">
-            <objects>
-                <tableViewController id="6qf-FD-p2d" customClass="SettingsTableController" customModule="IqraApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="59" sectionHeaderHeight="28" sectionFooterHeight="28" id="dHI-iL-mLL">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsCell" rowHeight="60" id="V8b-Zr-Njd" customClass="SettingsCellContainer" customModule="IqraApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V8b-Zr-Njd" id="n7S-HY-iC4">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dmx-1o-UVA">
-                                            <rect key="frame" x="8" y="8" width="365" height="44"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izA-XU-dn5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="365" height="44"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="dmx-1o-UVA" firstAttribute="top" secondItem="n7S-HY-iC4" secondAttribute="top" constant="10" id="Rvo-dH-3NP"/>
-                                        <constraint firstItem="dmx-1o-UVA" firstAttribute="leading" secondItem="n7S-HY-iC4" secondAttribute="leading" constant="10" id="ejT-bT-iSa"/>
-                                        <constraint firstAttribute="trailing" secondItem="dmx-1o-UVA" secondAttribute="trailing" id="q1u-8O-ZZW"/>
-                                        <constraint firstAttribute="bottom" secondItem="dmx-1o-UVA" secondAttribute="bottom" constant="5" id="sdv-2r-7Tb"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="settingsTitle" destination="izA-XU-dn5" id="nRV-W5-7tk"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="6qf-FD-p2d" id="1mg-mO-DWa"/>
-                            <outlet property="delegate" destination="6qf-FD-p2d" id="NEE-RP-Egk"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="eEe-A9-VuV">
-                        <barButtonItem key="leftBarButtonItem" image="backspace" id="cTd-yA-eKI">
-                            <connections>
-                                <segue destination="zHD-c7-EXD" kind="unwind" unwindAction="unwindToMainSegueWithSender:" id="CZR-jH-o45"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="backButton" destination="cTd-yA-eKI" id="dg8-ub-pED"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eYc-pR-5eb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="zHD-c7-EXD" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="3172" y="124.58770614692655"/>
+            <point key="canvasLocation" x="2697" y="853"/>
         </scene>
         <!--General Settings-->
         <scene sceneID="fby-Zw-Txn">
@@ -325,7 +264,7 @@
                     <navigationItem key="navigationItem" title="General Settings" id="ejN-lZ-SIQ">
                         <barButtonItem key="leftBarButtonItem" image="backspace" id="wQY-f2-QUs">
                             <connections>
-                                <segue destination="788-U1-FJ6" kind="unwind" unwindAction="unwindToSettingsSegueWithSender:" id="ejy-SB-yLa"/>
+                                <segue destination="788-U1-FJ6" kind="unwind" unwindAction="unwindToMainSegueWithSender:" id="kt0-wH-viF"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="done" id="I9B-I3-5qj">
@@ -343,7 +282,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfq-s2-CAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="788-U1-FJ6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5071.1999999999998" y="124.58770614692655"/>
+            <point key="canvasLocation" x="4294" y="125"/>
         </scene>
         <!--About-->
         <scene sceneID="mVL-eY-ShG">
@@ -377,7 +316,7 @@
                     <navigationItem key="navigationItem" title="About" id="WJA-ML-jQp">
                         <barButtonItem key="leftBarButtonItem" image="backspace" id="jIL-ec-efr">
                             <connections>
-                                <segue destination="3Vx-bP-3IK" kind="unwind" unwindAction="unwindToSettingsSegueWithSender:" id="Fru-wP-RiD"/>
+                                <segue destination="3Vx-bP-3IK" kind="unwind" unwindAction="unwindToMainSegueWithSender:" id="Tao-Uc-F6M"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -388,7 +327,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CUg-GC-e2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="3Vx-bP-3IK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="6912.5" y="113.5"/>
+            <point key="canvasLocation" x="5926" y="125"/>
         </scene>
         <!--Contact-->
         <scene sceneID="wk6-Js-3I9">
@@ -448,7 +387,7 @@
                     <navigationItem key="navigationItem" title="Contact" id="fLX-wU-kAP">
                         <barButtonItem key="leftBarButtonItem" image="backspace" id="4PB-PZ-DM8">
                             <connections>
-                                <segue destination="BCB-4Q-CQc" kind="unwind" unwindAction="unwindToSettingsSegueWithSender:" id="Mea-DF-okg"/>
+                                <segue destination="BCB-4Q-CQc" kind="unwind" unwindAction="unwindToMainSegueWithSender:" id="tBx-5v-PLF"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Send" id="FtM-xb-ekF">
@@ -467,7 +406,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ulg-lw-NGi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="BCB-4Q-CQc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="9136.7999999999993" y="113.79310344827587"/>
+            <point key="canvasLocation" x="7372" y="125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EvN-PN-gcW">
@@ -487,27 +426,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UFs-hB-VPt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="hah-Pv-Dgz">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dzl-HC-qjL" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="4VP-IH-7mo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.019607843140000001" green="0.56862745100000001" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="6qf-FD-p2d" kind="relationship" relationship="rootViewController" id="kbW-QU-tRr"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nZt-SX-4zY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2232.8000000000002" y="124.58770614692655"/>
+            <point key="canvasLocation" x="2009" y="125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jjd-2J-3iT">
@@ -527,7 +446,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0h-Cx-b0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4132" y="124.58770614692655"/>
+            <point key="canvasLocation" x="3548" y="125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EqZ-3Z-ZL0">
@@ -547,7 +466,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qaC-m0-aIk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6055" y="114"/>
+            <point key="canvasLocation" x="5167" y="125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="44f-Ls-efZ">
@@ -567,7 +486,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="snd-hp-uF7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8197.6000000000004" y="113.79310344827587"/>
+            <point key="canvasLocation" x="6649" y="125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zqL-e8-k9m">
@@ -587,7 +506,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dt6-fr-2DT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1069.5999999999999" y="854.1229385307347"/>
+            <point key="canvasLocation" x="2009" y="852"/>
         </scene>
     </scenes>
     <resources>
