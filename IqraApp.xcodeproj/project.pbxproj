@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7923FFA31DFB043300EFCBF8 /* NetworkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7923FFA21DFB043300EFCBF8 /* NetworkDelegate.swift */; };
 		7949B9BB1DF4D8690086BF30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7949B9BA1DF4D8690086BF30 /* AppDelegate.swift */; };
 		7949B9BD1DF4D8690086BF30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7949B9BC1DF4D8690086BF30 /* ViewController.swift */; };
 		7949B9C01DF4D8690086BF30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7949B9BE1DF4D8690086BF30 /* Main.storyboard */; };
 		7949B9C21DF4D8690086BF30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7949B9C11DF4D8690086BF30 /* Assets.xcassets */; };
 		7949B9C51DF4D8690086BF30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7949B9C31DF4D8690086BF30 /* LaunchScreen.storyboard */; };
 		7949B9D01DF4D8690086BF30 /* IqraAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7949B9CF1DF4D8690086BF30 /* IqraAppTests.swift */; };
+		7949B9DD1DF542300086BF30 /* GeneralSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7949B9DC1DF542300086BF30 /* GeneralSettingsController.swift */; };
+		7949B9DF1DF543940086BF30 /* SettingsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7949B9DE1DF543940086BF30 /* SettingsTableController.swift */; };
+		7949B9E11DF5445E0086BF30 /* SettingsCellContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7949B9E01DF5445E0086BF30 /* SettingsCellContainer.swift */; };
+		7949B9E31DF866BD0086BF30 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7949B9E21DF866BD0086BF30 /* AboutController.swift */; };
+		7949B9E51DF8688B0086BF30 /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7949B9E41DF8688B0086BF30 /* ContactController.swift */; };
+		79E76E191DFDA50C001BE43A /* Ayah.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E76E181DFDA50C001BE43A /* Ayah.swift */; };
+		79E76E1B1DFDAA07001BE43A /* ResultsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E76E1A1DFDAA07001BE43A /* ResultsViewCell.swift */; };
+		79E76E1D1DFDAAC5001BE43A /* ResultsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E76E1C1DFDAAC5001BE43A /* ResultsTableController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7923FFA21DFB043300EFCBF8 /* NetworkDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDelegate.swift; sourceTree = "<group>"; };
 		7949B9B71DF4D8690086BF30 /* IqraApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IqraApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7949B9BA1DF4D8690086BF30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7949B9BC1DF4D8690086BF30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +46,14 @@
 		7949B9CB1DF4D8690086BF30 /* IqraAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IqraAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7949B9CF1DF4D8690086BF30 /* IqraAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IqraAppTests.swift; sourceTree = "<group>"; };
 		7949B9D11DF4D8690086BF30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7949B9DC1DF542300086BF30 /* GeneralSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralSettingsController.swift; sourceTree = "<group>"; };
+		7949B9DE1DF543940086BF30 /* SettingsTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableController.swift; sourceTree = "<group>"; };
+		7949B9E01DF5445E0086BF30 /* SettingsCellContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCellContainer.swift; sourceTree = "<group>"; };
+		7949B9E21DF866BD0086BF30 /* AboutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
+		7949B9E41DF8688B0086BF30 /* ContactController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
+		79E76E181DFDA50C001BE43A /* Ayah.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ayah.swift; sourceTree = "<group>"; };
+		79E76E1A1DFDAA07001BE43A /* ResultsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewCell.swift; sourceTree = "<group>"; };
+		79E76E1C1DFDAAC5001BE43A /* ResultsTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +97,19 @@
 			children = (
 				7949B9BA1DF4D8690086BF30 /* AppDelegate.swift */,
 				7949B9BC1DF4D8690086BF30 /* ViewController.swift */,
+				7949B9DC1DF542300086BF30 /* GeneralSettingsController.swift */,
+				7949B9DE1DF543940086BF30 /* SettingsTableController.swift */,
+				7949B9E01DF5445E0086BF30 /* SettingsCellContainer.swift */,
 				7949B9BE1DF4D8690086BF30 /* Main.storyboard */,
+				79E76E1C1DFDAAC5001BE43A /* ResultsTableController.swift */,
+				79E76E1A1DFDAA07001BE43A /* ResultsViewCell.swift */,
+				7949B9E41DF8688B0086BF30 /* ContactController.swift */,
+				7949B9E21DF866BD0086BF30 /* AboutController.swift */,
 				7949B9C11DF4D8690086BF30 /* Assets.xcassets */,
 				7949B9C31DF4D8690086BF30 /* LaunchScreen.storyboard */,
 				7949B9C61DF4D8690086BF30 /* Info.plist */,
+				7923FFA21DFB043300EFCBF8 /* NetworkDelegate.swift */,
+				79E76E181DFDA50C001BE43A /* Ayah.swift */,
 			);
 			path = IqraApp;
 			sourceTree = "<group>";
@@ -201,8 +228,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7949B9DF1DF543940086BF30 /* SettingsTableController.swift in Sources */,
+				7949B9E11DF5445E0086BF30 /* SettingsCellContainer.swift in Sources */,
+				7949B9DD1DF542300086BF30 /* GeneralSettingsController.swift in Sources */,
+				7923FFA31DFB043300EFCBF8 /* NetworkDelegate.swift in Sources */,
+				7949B9E51DF8688B0086BF30 /* ContactController.swift in Sources */,
 				7949B9BD1DF4D8690086BF30 /* ViewController.swift in Sources */,
+				79E76E191DFDA50C001BE43A /* Ayah.swift in Sources */,
 				7949B9BB1DF4D8690086BF30 /* AppDelegate.swift in Sources */,
+				7949B9E31DF866BD0086BF30 /* AboutController.swift in Sources */,
+				79E76E1D1DFDAAC5001BE43A /* ResultsTableController.swift in Sources */,
+				79E76E1B1DFDAA07001BE43A /* ResultsViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +448,7 @@
 				7949B9D61DF4D8690086BF30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7949B9D71DF4D8690086BF30 /* Build configuration list for PBXNativeTarget "IqraAppTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +457,7 @@
 				7949B9D91DF4D8690086BF30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

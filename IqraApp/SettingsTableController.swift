@@ -8,88 +8,88 @@
 
 import UIKit
 
-class SettingsTableViewController: UITableViewController {
-
+class SettingsTableController: UITableViewController {
+    
+    @IBOutlet var backButton: UIBarButtonItem!
+    
+    let settings = ["General Settings", "About", "Contact", "Share"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let source = sender as! UIBarButtonItem
+        
+        if (source === backButton) {
+            // do nothing
+        }
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch (indexPath.row) {
+        case 0:
+            // General Settings
+            let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "GeneralSettingsController") as! GeneralSettingsController
+            self.navigationController?.pushViewController(storyboard, animated: true)
 
+            break
+        case 1:
+            // About
+            let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "AboutController") as! AboutController
+            self.navigationController?.pushViewController(storyboard, animated: true)
+            
+            break
+        case 2:
+            // Contact      
+            let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "ContactController") as! ContactController
+            self.navigationController?.pushViewController(storyboard, animated: true)
+            
+            break
+        case 3:
+            // Share
+            let textToShare = "Check out this amazing app I\'ve been using called Iqra!"
+            
+            if let myWebsite = NSURL(string: "https://iqraapp.com/") {
+                let objectsToShare = [textToShare, myWebsite] as [Any]
+                let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                
+                activityVC.popoverPresentationController?.sourceView = self.view
+                self.present(activityVC, animated: true, completion: nil)
+            }
+            
+            break
+        default:
+            break
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return settings.count
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath) as! SettingsCellContainer
+        
+        // Configure cell
+        cell.settingsTitle.text = settings[indexPath.row]
+        
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    @IBAction func unwindToSettingsSegue(sender: UIStoryboardSegue) {
+        let sourceViewController = sender.source
+        
+        if ((sourceViewController as? GeneralSettingsController) != nil) {
+            // do nothing
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

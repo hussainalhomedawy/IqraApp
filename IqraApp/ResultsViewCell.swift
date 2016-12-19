@@ -9,16 +9,26 @@
 import UIKit
 
 class ResultsViewCell: UITableViewCell {
-
+    
+    @IBOutlet var translatedSurahName: UILabel!
+    @IBOutlet var arabicSurahName: UILabel!
+    @IBOutlet var verseNumber: UILabel!
+    
+    @IBOutlet var arabicVerse: UITextView!
+    @IBOutlet var translatedVerse: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        arabicSurahName.textAlignment = .right
+        translatedVerse.textAlignment = .left
+        verseNumber.textAlignment = .right
+        
+        arabicVerse.textAlignment = .right
+        translatedVerse.textAlignment = .left
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
 }

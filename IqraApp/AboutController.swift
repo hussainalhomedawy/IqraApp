@@ -6,4 +6,22 @@
 //  Copyright © 2016 Hussain Al-Homedawy. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class AboutController: UIViewController {
+    
+    @IBOutlet var textView: UITextView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
+    
+}
