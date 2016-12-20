@@ -2,4 +2,54 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IqraApp/ViewController.swift"
+            timestampString = "503873465.664103"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "searchCallback(_:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IqraApp.ViewController.((searchCallback in _95D62FBFCEA70E6BA054F62B8A3879FE) (Foundation.Data, __ObjC.URLResponse) -&gt; ()).(closure #1)"
+                  moduleName = "IqraApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hussainal-homedawy/XcodeProjects/IqraApp/IqraApp/ViewController.swift"
+                  timestampString = "503873361.558282"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IqraApp.ViewController.((searchCallback in _95D62FBFCEA70E6BA054F62B8A3879FE) (Foundation.Data, __ObjC.URLResponse) -&gt; ()).(closure #1)"
+                  moduleName = "IqraApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hussainal-homedawy/XcodeProjects/IqraApp/IqraApp/ViewController.swift"
+                  timestampString = "503873361.559741"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "1748">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

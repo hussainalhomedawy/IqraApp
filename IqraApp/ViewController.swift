@@ -16,8 +16,9 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, AVSpeechSynt
     
     let networkRequestDelegate = NetworkDelegate()
     let audioEngine = AVAudioEngine()
-    
     let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "ar_AE"))
+    let waitingPopover = UIAlertController(title: nil, message: "Please wait", preferredStyle: UIAlertControllerStyle.alert);
+    
     var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     var recognitionTask: SFSpeechRecognitionTask?
     
@@ -178,6 +179,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, AVSpeechSynt
                 storyboard.query = self.searchQuery
                 storyboard.actualResults = results.count
                 
+                self.dismissWaitingPopover()
                 self.navigationController?.pushViewController(storyboard, animated: true)
             } else {
                 self.micStatus.text = "No matches were found"
@@ -238,6 +240,23 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, AVSpeechSynt
         present(alertController, animated: true, completion: nil)
     }
     
+    private func presentWaitingPopover() {
+        let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        
+        spinner.color = UIColor.black;
+        spinner.center = CGPoint(x: 40, y: 30)
+        spinner.startAnimating();
+        
+        waitingPopover.view.addSubview(spinner);
+        
+        present(waitingPopover, animated: true, completion: nil)
+    }
+    
+    private func dismissWaitingPopover() {
+        self.dismiss(animated: true, completion: nil)
+        self.navigationController!.popToRootViewController(animated: true)
+    }
+    
     @IBAction func speechRecognition(_ sender: UIButton) {
         try! beepSound()
         
@@ -256,10 +275,13 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, AVSpeechSynt
         speechButton.setBackgroundImage(#imageLiteral(resourceName: "mic_active"), for: .normal)
         self.micStatus.text = "Please begin reciting"
         
-        searchView.text = "الله"
+        // Enable this for debugging purposes
+        //searchView.text = "الله"
     }
     
     private func endRecording() {
+        presentWaitingPopover()
+        
         // Search for results
         if ((searchView.text?.characters.count)! > 0) {
             let search = searchView.text!

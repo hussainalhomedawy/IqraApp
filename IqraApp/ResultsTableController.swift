@@ -25,9 +25,9 @@ class ResultsTableController: UITableViewController {
         
 
         if (results.count != actualResults) {
-            resultsView.text = "\(actualResults) results (not all shown) for \(query):"
+            resultsView.text = "\(actualResults) results (not all shown):"
         } else {
-            resultsView.text = "\(results.count) results for \(query):"
+            resultsView.text = "\(results.count) results:"
         }
         
         resultsView.contentInset = UIEdgeInsetsMake(0, 15, 0, 15);

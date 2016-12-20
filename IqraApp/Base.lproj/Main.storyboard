@@ -235,30 +235,26 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9r5-cZ-xgd">
-                                <rect key="frame" x="16" y="37" width="323" height="258"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVL-zy-vPS">
-                                        <rect key="frame" x="0.0" y="0.0" width="127" height="32"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l2L-5w-NWP">
-                                        <rect key="frame" x="0.0" y="42" width="320" height="216"/>
-                                        <connections>
-                                            <outlet property="dataSource" destination="TS2-na-ZQC" id="Nwi-Jo-x31"/>
-                                            <outlet property="delegate" destination="TS2-na-ZQC" id="cjQ-mx-f46"/>
-                                        </connections>
-                                    </pickerView>
-                                </subviews>
-                            </stackView>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l2L-5w-NWP">
+                                <rect key="frame" x="16" y="79" width="320" height="126"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="TS2-na-ZQC" id="Nwi-Jo-x31"/>
+                                    <outlet property="delegate" destination="TS2-na-ZQC" id="cjQ-mx-f46"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Translation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVL-zy-vPS">
+                                <rect key="frame" x="96" y="39" width="126.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9r5-cZ-xgd" firstAttribute="top" secondItem="9f6-TF-X4i" secondAttribute="bottom" constant="10" id="8Wd-0N-Kvy"/>
-                            <constraint firstItem="9r5-cZ-xgd" firstAttribute="leading" secondItem="Vwc-tG-Chv" secondAttribute="leadingMargin" constant="10" id="kUd-62-unx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9r5-cZ-xgd" secondAttribute="trailing" constant="10" id="v1c-II-AHs"/>
+                            <constraint firstItem="l2L-5w-NWP" firstAttribute="leading" secondItem="Vwc-tG-Chv" secondAttribute="leading" constant="10" id="1MJ-hA-KPV"/>
+                            <constraint firstItem="fVL-zy-vPS" firstAttribute="top" secondItem="9f6-TF-X4i" secondAttribute="bottom" constant="35" id="3l3-zN-IR5"/>
+                            <constraint firstItem="l2L-5w-NWP" firstAttribute="top" secondItem="fVL-zy-vPS" secondAttribute="bottom" constant="10" id="DJU-Vi-jvW"/>
+                            <constraint firstItem="fVL-zy-vPS" firstAttribute="leading" secondItem="Vwc-tG-Chv" secondAttribute="leadingMargin" constant="75" id="hMW-gP-ujc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="General Settings" id="ejN-lZ-SIQ">
@@ -282,7 +278,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfq-s2-CAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="788-U1-FJ6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4294" y="125"/>
+            <point key="canvasLocation" x="4293.6000000000004" y="124.58770614692655"/>
         </scene>
         <!--About-->
         <scene sceneID="mVL-eY-ShG">

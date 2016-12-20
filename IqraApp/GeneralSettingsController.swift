@@ -14,9 +14,9 @@ class GeneralSettingsController: UIViewController, UIPickerViewDataSource, UIPic
     @IBOutlet var saveButton: UIBarButtonItem!
     @IBOutlet var pickerView: UIPickerView!
     
-    var translationSource = ["(EN) Sahih International", "(EN) A. J. Arberry", "(EN) Muhammad Asad",
-                            "(EN) Abdul Majid Daryabadi", "(EN) Abdullah Yusuf Ali", "(EN) Sayyid Abul Ala Maududi",
-                            "(EN) Mohammad Habib Shakir", "(EN) Mohammed Marmaduke William Pickthall", "(EN) Professor Shaykh Hasan Al-Fatih Qaribullah", "(EN) Muhammad Sarwar", "(EN) Dr. Muhammad Taqi-ud-Din al-Hilali and Dr. Muhammad Muhsin Khan", "(EN) Transliteration"];
+    var translationSource = ["Sahih International", "A. J. Arberry", "Muhammad Asad",
+                            "Abdul Majid Daryabadi", "Abdullah Yusuf Ali", "Sayyid Abul Ala Maududi",
+                            "Mohammad Habib Shakir", "Mohammed Marmaduke William Pickthall", "Professor Shaykh Hasan Al-Fatih Qaribullah", "Muhammad Sarwar", "Dr. Muhammad Taqi-ud-Din al-Hilali and Dr. Muhammad Muhsin Khan", "Transliteration"];
     
     override func viewDidLoad() {
         super.viewDidLoad()
