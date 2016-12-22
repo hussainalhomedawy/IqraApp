@@ -17,6 +17,7 @@
 		7949B9DD1DF542300086BF30 /* GeneralSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7949B9DC1DF542300086BF30 /* GeneralSettingsController.swift */; };
 		7949B9E31DF866BD0086BF30 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7949B9E21DF866BD0086BF30 /* AboutController.swift */; };
 		7949B9E51DF8688B0086BF30 /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7949B9E41DF8688B0086BF30 /* ContactController.swift */; };
+		7967EE501E0BB1D500D6F6DB /* Confidential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7967EE4F1E0BB1D500D6F6DB /* Confidential.swift */; };
 		79E76E191DFDA50C001BE43A /* Ayah.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E76E181DFDA50C001BE43A /* Ayah.swift */; };
 		79E76E1B1DFDAA07001BE43A /* ResultsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E76E1A1DFDAA07001BE43A /* ResultsViewCell.swift */; };
 		79E76E1D1DFDAAC5001BE43A /* ResultsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E76E1C1DFDAAC5001BE43A /* ResultsTableController.swift */; };
@@ -47,6 +48,7 @@
 		7949B9DC1DF542300086BF30 /* GeneralSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralSettingsController.swift; sourceTree = "<group>"; };
 		7949B9E21DF866BD0086BF30 /* AboutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
 		7949B9E41DF8688B0086BF30 /* ContactController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
+		7967EE4F1E0BB1D500D6F6DB /* Confidential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Confidential.swift; sourceTree = "<group>"; };
 		79E76E181DFDA50C001BE43A /* Ayah.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ayah.swift; sourceTree = "<group>"; };
 		79E76E1A1DFDAA07001BE43A /* ResultsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewCell.swift; sourceTree = "<group>"; };
 		79E76E1C1DFDAAC5001BE43A /* ResultsTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				7949B9C61DF4D8690086BF30 /* Info.plist */,
 				7923FFA21DFB043300EFCBF8 /* NetworkDelegate.swift */,
 				79E76E181DFDA50C001BE43A /* Ayah.swift */,
+				7967EE4F1E0BB1D500D6F6DB /* Confidential.swift */,
 			);
 			path = IqraApp;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				79E76E191DFDA50C001BE43A /* Ayah.swift in Sources */,
 				7949B9BB1DF4D8690086BF30 /* AppDelegate.swift in Sources */,
 				7949B9E31DF866BD0086BF30 /* AboutController.swift in Sources */,
+				7967EE501E0BB1D500D6F6DB /* Confidential.swift in Sources */,
 				79E76E1D1DFDAAC5001BE43A /* ResultsTableController.swift in Sources */,
 				79E76E1B1DFDAA07001BE43A /* ResultsViewCell.swift in Sources */,
 			);

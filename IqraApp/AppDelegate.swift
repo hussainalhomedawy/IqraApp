@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
         UINavigationBar.appearance().shadowImage = UIImage()
         
+        // Change status bar style
+        application.setStatusBarStyle(.lightContent, animated: true)
+        
         return true
     }
 

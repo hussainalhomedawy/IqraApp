@@ -12,7 +12,7 @@ class NetworkDelegate {
     
     private final var SEARCH_URL = "https://api.iqraapp.com/api/v3.0/search"
     private final var API_URL = "http://api.iqraapp.com/api/v1.0/email"
-    private final var API_KEY = "9a49f2c2966a3debd421409cf26f804d4695b1bca03e87cced0167bd85a5f8d3"
+    private final var API_KEY = Confidential.API_KEY
     
     func postData(_ endpoint: String, _ data:Data, _ callback:@escaping (Data, URLResponse) -> Void) {
         let URL = NSURL(string: endpoint)
