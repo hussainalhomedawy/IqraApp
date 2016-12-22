@@ -18,6 +18,12 @@ class GeneralSettingsController: UIViewController, UIPickerViewDataSource, UIPic
                             "Abdul Majid Daryabadi", "Abdullah Yusuf Ali", "Sayyid Abul Ala Maududi",
                             "Mohammad Habib Shakir", "Mohammed Marmaduke William Pickthall", "Professor Shaykh Hasan Al-Fatih Qaribullah", "Muhammad Sarwar", "Dr. Muhammad Taqi-ud-Din al-Hilali and Dr. Muhammad Muhsin Khan", "Transliteration"];
     
+    var translationCode = ["en-sahih", "en-arberry", "en-asad", "en-daryabadi", "en-hilali", "en-pickthall",
+                           "en-qaribullah", "en-sarwar", "en-yusufali", "en-maududi", "en-shakir",
+                           "en-transliteration"];
+    
+    var selectedTranslationCode: String = "en-hilali"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerView.dataSource = self;
@@ -34,8 +40,14 @@ class GeneralSettingsController: UIViewController, UIPickerViewDataSource, UIPic
         if (source == backButton) {
             // do nothing
         } else if (source == saveButton) {
-            // do nothing
+            let viewController = segue.destination as! ViewController
+            
+            viewController.translationCode = selectedTranslationCode
         }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedTranslationCode = translationCode[row]
     }
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {

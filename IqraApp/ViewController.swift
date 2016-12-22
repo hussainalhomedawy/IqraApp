@@ -12,7 +12,9 @@ import Speech
 
 class ViewController: UIViewController, SFSpeechRecognizerDelegate, AVSpeechSynthesizerDelegate {
     
+    var resultsController: ResultsTableController? = nil
     var searchQuery: String = ""
+    var translationCode: String = "en-hilali"
     
     let networkRequestDelegate = NetworkDelegate()
     let audioEngine = AVAudioEngine()
@@ -69,7 +71,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, AVSpeechSynt
     }
     
     @IBAction func unwindToMainSegue(sender: UIStoryboardSegue) {
-        // Do nothing
+        //self.navigationController!.popViewController(animated: true)
     }
     
     
@@ -159,7 +161,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, AVSpeechSynt
         
         // Launch results segue
         DispatchQueue.main.async {
-            let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "ResultsTableController") as! ResultsTableController
+            self.resultsController = self.storyboard?.instantiateViewController(withIdentifier: "ResultsTableController") as! ResultsTableController
             
             // Shorten the list if necessary
             var finalResults = [Ayah]()
@@ -173,16 +175,17 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, AVSpeechSynt
                     finalResults = results
                 }
                 
-                storyboard.results = finalResults
-                storyboard.selection = [Bool](repeating: true, count: finalResults.count)
-                storyboard.expectedCellHeight = [CGFloat](repeating: 0, count: finalResults.count)
-                storyboard.query = self.searchQuery
-                storyboard.actualResults = results.count
+                self.resultsController?.results = finalResults
+                self.resultsController?.selection = [Bool](repeating: true, count: finalResults.count)
+                self.resultsController?.expectedCellHeight = [CGFloat](repeating: 0, count: finalResults.count)
+                self.resultsController?.query = self.searchQuery
+                self.resultsController?.actualResults = results.count
                 
                 self.dismissWaitingPopover()
-                self.navigationController?.pushViewController(storyboard, animated: true)
             } else {
                 self.micStatus.text = "No matches were found"
+                self.resultsController = nil
+                self.dismissWaitingPopover()
             }
         }
     }
@@ -253,8 +256,11 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, AVSpeechSynt
     }
     
     private func dismissWaitingPopover() {
-        self.dismiss(animated: true, completion: nil)
-        self.navigationController!.popToRootViewController(animated: true)
+        self.dismiss(animated: true, completion: {
+            if (self.resultsController != nil) {
+                self.navigationController?.pushViewController(self.resultsController!, animated: true)
+            }
+        })
     }
     
     @IBAction func speechRecognition(_ sender: UIButton) {
@@ -277,18 +283,20 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, AVSpeechSynt
         
         // Enable this for debugging purposes
         //searchView.text = "الله"
+        //self.searchQuery = searchView.text!
     }
     
     private func endRecording() {
-        presentWaitingPopover()
         
         // Search for results
         if ((searchView.text?.characters.count)! > 0) {
+            presentWaitingPopover()
+            
             let search = searchView.text!
             let target = "\u{e2}"
             let query = search.substring(from: target.endIndex)
             
-            networkRequestDelegate.performSearchQuery(query, "en-hilali", searchCallback)
+            networkRequestDelegate.performSearchQuery(query, translationCode, searchCallback)
         }
         
         self.searchQuery = searchView.text!
